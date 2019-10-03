@@ -1,4 +1,5 @@
 ﻿using System;
+using library.Controllers;
 
 namespace library
 {
@@ -6,7 +7,27 @@ namespace library
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Clear();
+            InventoryController ic = new InventoryController();
+            bool running = true;
+            while (running)
+            {
+                System.Console.WriteLine(@"
+ ____  _____         _   __                     _         
+|_   \|_   _|       / |_[  |                   | |        
+  |   \ | |   ,--. `| |-'| |--.   ,--.   _ .--.\_|.--.    
+  | |\ \| |  `'_\ : | |  | .-. | `'_\ : [ `.-. | ( (`\]   
+ _| |_\   |_ // | |,| |, | | | | // | |, | | | |  `'.'.   
+|_____|\____|\'-;__/\__/[___]|__]\'-;__/[___||__][\__) )  
+ |_   _|    (_) [  |                                      
+   | |      __   | |.--.   _ .--.  ,--.   _ .--.  _   __  
+   | |   _ [  |  | '/'`\ \[ `/'`\]`'_\ : [ `/'`\][ \ [  ] 
+  _| |__/ | | |  |  \__/ | | |    // | |, | |     \ '/ /  
+ |________|[___][__;.__.' [___]   \'-;__/[___]  [\_:  /   
+                                                 \__.'    
+                ");
+                running = ic.Start();
+            }
         }
     }
 }

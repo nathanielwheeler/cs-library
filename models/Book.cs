@@ -1,4 +1,4 @@
-namespace library.models
+namespace library.Models
 {
     class Book
     {
